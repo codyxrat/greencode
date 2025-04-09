@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url('bg.png');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #4a4a4a;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Header */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(56, 142, 60, 0.9);
+	color: white;
+	width: 100%;
+	padding: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	border-bottom: 3px solid #2c6e49;
+	text-align: center;
+}
+
+header img {
+	max-width: 150px;
+	margin-right: 20px;
+	height: auto;
+}
+
+header h1 {
+	font-size: 3rem;
+	margin: 0;
+	font-weight: 700;
+}
+
+header p {
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+/* Navigasjonsmeny */
+nav {
+	display: flex;
+	justify-content: center;
+	background-color: #6e4b3a;
+	padding: 12px 0;
+	width: 100%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+	color: white;
+	padding: 16px 24px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: 500;
+	transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+	background-color: #8e6f53;
+	border-radius: 5px;
+}
+
+/* Hovedinnhold */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+	max-width: 900px;
+	width: 90%;
+	padding: 20px;
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+    width: 100%;
+}
+
+canvas {
+  max-width: 900px;
+  margin: 40px auto;
+  display: block;
+  flex: 1 1 calc(33.333% - 20px);
+	background-color: #d3c7c1;
+	border: 1px solid #c8e6c9;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 10px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Kort med informasjon */
+.card {
+    flex: 1 1 calc(33.333% - 20px);
+	background-color: #d3c7c1;
+	border: 1px solid #c8e6c9;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 10px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+	background-color: #6e4b3a;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	border-top: 3px solid #6e4b3a;
+	margin-top: auto;
+}
+
+/* Responsivitet */
+@media screen and (max-width: 600px) {
+	.content {
+		padding: 10px;
+	}
+
+	.card {
+		padding: 15px;
+	}
+
+	nav a {
+		padding: 10px;
+	}
+
+	header h1 {
+		font-size: 2rem;
+	}
+}
