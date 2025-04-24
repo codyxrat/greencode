@@ -7,23 +7,14 @@
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-<header>
-    <img src="logo.png" alt="Logo">
-    <div>
-        <h1>Grønn Koding</h1>
-        <p>Hvordan utvikling kan være både effektivt og bærekraftig</p>
-    </div>
-</header>
-
-<nav>
-    <a href="index.html">Hjem</a>
-    <a href="om.html">Om</a>
-    <a href="toolkit.html">Verktøykasse</a>
-	<a href="eksempler.html">Kode-eksempler</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
-
+<div id="navbar"></div>
+<script>
+	fetch('header.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('navbar').innerHTML = data;
+	});
+</script>
 <div class="content">
     <section>
         <h2>Hva er grønn koding?</h2>
@@ -42,25 +33,8 @@
         </div>
     </section>
 
-
-
-
-
-    
     <section>
-        <p>heheheheheheheh<br><br>heheheuhfur</p>
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Hvordan begynne med grønn koding?</h2>
+		<h2>Hvordan begynne med grønn koding?</h2>
         <p>For å komme i gang, fokuser på disse prinsippene:</p>
         <ul>
             <li>Skrive ren og effektiv kode</li>
@@ -79,7 +53,6 @@
         </ul>
     </section>
 
-    
     <section>
         <h2>Visste du at...</h2>
         <ul>
@@ -89,18 +62,15 @@
         </ul>
     </section>
 
-
     <section>
         <h2>Hva kan du gjøre nå?</h2>
         <p>Start med små grep: Gå gjennom din eksisterende kodebase og se etter forbedringer. Tenk på brukeropplevelse, lastetid og hvilke teknologier du bruker. Og husk – hver linje med god kode teller!</p>
     </section>
-    
 
-    
     <section>
         <h2>Nyttige faner</h2>
         <p>Besøk våre faner for mer informasjon!</p></p><br>
-        <P><a href="grønnkode.no/om.html/">Om</a> fanen innheolder generell informasjon om grønn koding</P>
+        <P><a href="https://grønnkode.no/om.html">Om</a> fanen innheolder generell informasjon om grønn koding</P>
         <br>        
         <p><a href="https://grønnkode.no/toolkit.html">Verktøykasse</a> fanen inneholder nyttige verktøy som er vesentlige om man bruke grønn koding i praksis</p>
         <br>
@@ -108,17 +78,16 @@
         
         
     </section>
-    
-
-
-
-    <br><br>
-    
 </div>
 
-<footer>
-    <p>&copy; 2025 Grønn Koding. Alle rettigheter reservert.</p>
-</footer>
+<div id="footer"></div>
+<script>
+	fetch('footer.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('footer').innerHTML = data;
+	});
+</script>
 
 </body>
 </html>
