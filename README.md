@@ -1,4 +1,4 @@
 # grønnkode.no
-
-Her er alle filene til index, fyll gjerne inn med faner .html sider og bilder. 
-SKRIV BESKRIVERLSE UNDER FILENE 
+Skriv hva du endrer i commit changes om du endrer noe
+Her er alle filene til index og resterende navigasjonssider .html sider og bilder.
+Alltid ha disse oppdatert til nyeste versjon
