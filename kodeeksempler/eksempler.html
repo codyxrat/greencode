@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eksempler på grønn koding</title>
+<link rel="stylesheet" href="index.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  function toggleExample(button) {
+    const codeBlock = button.nextElementSibling;
+    if (codeBlock.style.display === "none") {
+      codeBlock.style.display = "block";
+      button.textContent = "Skjul eksempel";
+    } else {
+      codeBlock.style.display = "none";
+      button.textContent = "Vis eksempel";
+    }
+  }
+</script>
+</head>
+<body>
+<div id="navbar"></div>
+<script>
+	fetch('header.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('navbar').innerHTML = data;
+	});
+</script>
+<div class="content">
+  <h2>Grønn koding vs. Ikke-grønn koding</h2>
+  <canvas id="comparisonChart" width="700" height="300"></canvas>
+  <script>
+      const ctx = document.getElementById('comparisonChart').getContext('2d');
+      const comparisonChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['CPU-bruk', 'Minneforbruk', 'Lastetid', 'Strømforbruk', 'Unødvendige funksjonskall'],
+              datasets: [
+                  {
+                      label: 'Grønn koding',
+                      data: [2, 2, 1, 2, 1],
+                      backgroundColor: 'rgba(34, 139, 34, 0.7)',
+                      borderColor: 'rgba(34, 139, 34, 1)',
+                      borderWidth: 1
+                  },
+                  {
+                      label: 'Ikke-grønn koding',
+                      data: [8, 9, 7, 8, 9],
+                      backgroundColor: 'rgba(220, 53, 69, 0.7)',
+                      borderColor: 'rgba(220, 53, 69, 1)',
+                      borderWidth: 1
+                  }
+              ]
+          },
+          options: {
+              responsive: true,
+              scales: {
+                  y: {
+                      beginAtZero: true,
+                      title: {
+                          display: true,
+                          text: 'Nivå (1 = lavt / 10 = høyt)'
+                      }
+                  }
+              }
+          }
+      }); 
+  </script>
+
+ <h2>Beskrivelse til grafen</h2> 
+    Grafen viser forskjellen mellom grønn koding og vanlig koding.
+    Grønn koding handler om å skrive kode som bruker mindre energi og jobber mer effektivt.
+    Dette kan for eksempel være å laste inn bilder kun når de vises på skjermen (lazy loading),
+    eller å huske tidligere beregninger slik at datamaskinen ikke må gjøre det samme flere ganger (caching). 
+    Slike teknikker er beskrevet i Python Docs og MDN Web Docs.
+    
+    Når vi skriver grønn kode, får vi raskere nettsider, mindre belastning på servere, og mindre strømforbruk.
+    Det betyr ikke bare en bedre opplevelse for brukerne, men også at vi sparer miljøet.
+    Ifølge Norges forskningsråd kan små endringer i måten vi bruker energi på ha stor betydning for å redusere klimagassutslipp.
+    Det samme gjelder for koden vi skriver — effektiv kode er bra for både teknologien og planeten.</p>
+
+<h2>Python-eksempler</h2>
+<div class="card">
+  <h3>Nybegynner: Listeforståelse</h3>
+  <p>Rask og effektiv måte å lage lister.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>squares = [x**2 for x in range(10)]</code></pre>
+</div>
+<div class="card">
+  <h3>Mellomnivå: Generatorer</h3>
+  <p>Gir ett element om gangen og sparer minne.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>def count_up_to(n):
+  yield from range(n)</code></pre>
+</div>
+<div class="card">
+  <h3>Avansert: Memoisering</h3>
+  <p>Lagrer resultater for å unngå gjentatte beregninger.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n):
+  return n if n &lt; 2 else fib(n-1) + fib(n-2)</code></pre>
+</div>
+
+<h2>JavaScript-eksempler</h2>
+<div class="card">
+  <h3>Nybegynner: Lazy loading</h3>
+  <p>Laster inn bilder kun når de trengs.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>&lt;img src=&quot;bilde.jpg&quot; loading=&quot;lazy&quot; alt=&quot;Et bilde&quot;&gt;</code></pre>
+</div>
+<div class="card">
+  <h3>Mellomnivå: Debounce-funksjon</h3>
+  <p>Forhindrer at funksjoner kalles for ofte.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>function debounce(func, delay) {
+let timer;
+return (...args) =&gt; {
+  clearTimeout(timer);
+  timer = setTimeout(() =&gt; func.apply(this, args), delay);
+};
+}</code></pre>
+</div>
+<div class="card">
+  <h3>Avansert: Map og filter</h3>
+  <p>Effektiv manipulering av arrays.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>const numbers = [1, 2, 3, 4, 5];
+const evenSquares = numbers.filter(n =&gt; n % 2 === 0).map(n =&gt; n * n);</code></pre>
+</div>
+
+<h2>Java-eksempler</h2>
+<div class="card">
+  <h3>Nybegynner: Enhanced for-loop</h3>
+  <p>Mer lesbar iterasjon over lister.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>for (int number : numbers) {
+  System.out.println(number);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>Mellomnivå: StringBuilder</h3>
+  <p>Bygger strenger effektivt i løkker.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>StringBuilder builder = new StringBuilder();
+for (int i = 0; i &lt; 100; i++) {
+  builder.append(i);
+}
+String result = builder.toString();</code></pre>
+</div>
+<div class="card">
+  <h3>Avansert: ParallelStream</h3>
+  <p>Utnytter flere kjerner for raskere prosessering.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>numbers.parallelStream().forEach(System.out::println);</code></pre>
+</div>
+
+<h2>C#-eksempler</h2>
+<div class="card">
+  <h3>Nybegynner: Foreach-løkke</h3>
+  <p>Enkel iterasjon over lister.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>foreach (var item in items)
+{
+  Console.WriteLine(item);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>Mellomnivå: Using for ressurskontroll</h3>
+  <p>Frigjør ressurser automatisk.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>using (StreamReader reader = new StreamReader("file.txt"))
+{
+  var content = reader.ReadToEnd();
+}</code></pre>
+</div>
+<div class="card">
+  <h3>Avansert: Async nettverkskall</h3>
+  <p>Utfører nettverkskall uten å blokkere tråder.</p>
+  <button onclick="toggleExample(this)">Vis eksempel</button>
+  <pre style="display:none;"><code>public async Task&lt;string&gt; GetDataAsync(string url)
+{
+  using var client = new HttpClient();
+  return await client.GetStringAsync(url);
+}</code></pre>
+</div>
+
+<h2>Kilder</h2>
+<ul>
+  <li><a href="https://docs.python.org/3/howto/functional.html#generators" target="_blank">Python Docs – Generatorer</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Web Docs – Array-metoder</a></li>
+  <li><a href="https://www.forskningsradet.no/siteassets/publikasjoner/2022/energieffektivisering-og-reduksjon-av-klimagasser.pdf" target="_blank">Norges forskningsråd – Energieffektivisering og reduksjon av klimagasser (2022)</a></li>
+  <li>Python-eksempler: <a href="https://docs.python.org/">Python Docs</a></li>
+  <li>JavaScript-eksempler: <a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+  <li>Java-eksempler: <a href="https://docs.oracle.com/">Oracle Java Documentation</a></li>
+  <li>C#-eksempler: <a href="https://learn.microsoft.com/">Microsoft Learn</a></li>
+</ul>
+
+</div>
+
+<div id="footer"></div>
+<script>
+	fetch('footer.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('footer').innerHTML = data;
+	});
+</script>
+
+</body>
+</html>
