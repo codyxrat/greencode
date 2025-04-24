@@ -7,66 +7,54 @@
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-<header>
-    <img src="logo.png" alt="Logo">
-    <div>
-        <h1>Grønn Koding</h1>
-        <p>Hvordan utvikling kan være både effektivt og bærekraftig</p>
-    </div>
-</header>
-
-<nav>
-    <a href="index.html">Hjem</a>
-    <a href="om.html">Om</a>
-    <a href="toolkit.html">Verktøykasse</a>
-	<a href="eksempler.html">Kode-eksempler</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
-
+<div id="navbar"></div>
+<script>
+	fetch('header.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('navbar').innerHTML = data;
+	});
+</script>
     <div class="content">
-        <div class = "card">Bærekraftig verktøykasse</div>
-        <p>I en tid hvor digitalt forbruk har en stadig større miljøpåvirkning, er det viktig
-		å skape nettsider som er effektive, raske og energieffektive. På denne siden finner du
-		verktøy som hjelper deg å analysere og forbedre nettsidens bærekraft - slik at du kan
-		redusere karbonavtrykket og samtidig gi brukerne en bedre opplevelse. <br>
-		Ved å være bevisst
-		på disse tingene kan vi sammen utgjøre en forskjell.</p>
-		
-        
-        <h2>Tips for en mer bærekraftig nettside:</h2>
-        <ul>
-            <li>Reduser bruk av tunge scripts og unødvendig kode.</li> <br>
-            <li>Optimaliser databaseforespørsler.</li><br>
-            <li>Reduser HTTP-forespørsler på nettsider.</li><br>
-            <li>Bruk caching for å minimere ressursbruk.</li><br>
-            <li>Minifiser CSS og JavaScript.</li><br>
-			<li>Bruk energieffektive servere og grønn hosting.</li><br>
-			<li>Komprimer filer og optimaliser bilder.</li><br>
-			<li>Hold nettsiden enkel og lett å navigere.</li><br>
-			<li>Bruk mørke fargetemaer (Dark Mode) - Dette reduserer energiforbruket på OLED-skjermer.</li><br>
-			<li>Hold designet minimalistisk - Enkle nettsider bruker mindre energi.</li><br>
-			<li>Begrens antall fonter og bruk systemfonter for raskere lasting.</li><br>
-			<li>Kombiner CSS- og JavaScript-filer der det er mulig.</li><br>
-			<li>Bruk klar og enkel tekst slik at brukerne finner informasjon raskere.</li><br>
-			<li>God tilgjengelighet gir mindre tid brukt på siden, noe som igjen kan spare energi.</li><br>
-        </ul>
-		</div>
+		<section>
+			<h2>Bærekraftig verktøykasse</h2>
+			<p>I en tid hvor digitalt forbruk har en stadig større miljøpåvirkning, er det viktig
+			å skape nettsider som er effektive, raske og energieffektive. På denne siden finner du
+			verktøy som hjelper deg å analysere og forbedre nettsidens bærekraft - slik at du kan
+			redusere karbonavtrykket og samtidig gi brukerne en bedre opplevelse. <br>
+			Ved å være bevisst på disse tingene kan vi sammen utgjøre en forskjell.</p>
+			<div class = "card">
+				<h2>Tips for en mer bærekraftig nettside:</h2>
+				<ul>
+					<li>Reduser bruk av tunge scripts og unødvendig kode.</li>
+					<li>Optimaliser databaseforespørsler.</li>
+					<li>Reduser HTTP-forespørsler på nettsider.</li>
+					<li>Bruk caching for å minimere ressursbruk.</li>
+					<li>Minifiser CSS og JavaScript.</li>
+					<li>Bruk energieffektive servere og grønn hosting.</li>
+					<li>Komprimer filer og optimaliser bilder.</li>
+					<li>Hold nettsiden enkel og lett å navigere.</li>
+					<li>Bruk mørke fargetemaer (Dark Mode) - Dette reduserer energiforbruket på OLED-skjermer.</li>
+					<li>Hold designet minimalistisk - Enkle nettsider bruker mindre energi.</li>
+					<li>Begrens antall fonter og bruk systemfonter for raskere lasting.</li>
+					<li>Kombiner CSS- og JavaScript-filer der det er mulig.</li>
+					<li>Bruk klar og enkel tekst slik at brukerne finner informasjon raskere.</li>
+					<li>God tilgjengelighet gir mindre tid brukt på siden, noe som igjen kan spare energi.</li>
+				</ul>
+			</div>
 
-        
-  <div class = "content" > 
-  <div class = "card" >
-  Her finner du nyttige verktøy for å redusere karbonavtrykket til nettsiden din og gjøre den mer bærekraftig!</div>
-  </p>
-  
-        <h2> Website Carbon Calculator - Hvor mye CO2 slipper nettsiden din ut?</h2> 
-		<p> Dette er et gratis verktøy, som lar deg måle hvor mye CO2 nettsiden din slipper ut hver gang noen besøker den.
-			Ved å analysere faktorer som filstørrelse, serverlokasjon og energieffektivitet, gir det deg 
-			innsikt i hvordan du kan gjøre siden din grønnere. Små endringer, som bildeoptimalisering og grønn 
-			hosting, kan ha stor betydning! </p>
-			
-			
-			<br>
+			<h2>Her finner du nyttige verktøy for å redusere karbonavtrykket til nettsiden din og gjøre den mer bærekraftig!</h2>
+		</section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> Website Carbon Calculator - Hvor mye CO2 slipper nettsiden din ut?</h2> 
+			<p>
+				Dette er et gratis verktøy, som lar deg måle hvor mye CO2 nettsiden din slipper ut hver gang noen besøker den.
+				Ved å analysere faktorer som filstørrelse, serverlokasjon og energieffektivitet, gir det deg 
+				innsikt i hvordan du kan gjøre siden din grønnere. Små endringer, som bildeoptimalisering og grønn 
+				hosting, kan ha stor betydning! 
+			</p>
             <div class="card">
                 <h3>Dette verktøyet tar utgangspunkt i flere faktorer:</h3>
                 <ul>
@@ -79,14 +67,16 @@
                     <li>Besøk: <a href="https://www.websitecarbon.com/" target="_blank">Website Carbon Calculator</a></li>
                 </ul>
             </div>
-		<br>
-			
-		<h2> Google PageSpeed Insights - Gjør nettsiden din raskere og mer energieffektiv!</h2>
-		<p>	Hastighet og bærekraft går hånd i hånd! Google PageSpeed Insights analyserer nettsidens innlastningstid og gir deg
-			konkrete anbefalinger for forbedringer. En raskere nettside betyr mindre strømforbruk for servere og brukerens enhet.</p<br>
-			
-
-            <div class="card">
+		</section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> Google PageSpeed Insights - Gjør nettsiden din raskere og mer energieffektiv!</h2>
+			<p>
+				Hastighet og bærekraft går hånd i hånd! Google PageSpeed Insights analyserer nettsidens innlastningstid og gir deg
+				konkrete anbefalinger for forbedringer. En raskere nettside betyr mindre strømforbruk for servere og brukerens enhet.
+			</p>
+			<div class="card">
                 <h3>Hva analyserer PageSpeed Insights?</h3>
                 <ul>
                     <li>Lastetid på mobil og desktop</li>
@@ -96,14 +86,15 @@
                     <li>Besøk: <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google PageSpeed Insights</a></li>
                 </ul>
             </div>
-
-
-			<br>
-			
-		<h2> Ecograder - En helhetlig bærekraftsanalyse av nettsiden din</h2>
-		<p>	Ecograder er et verktøy som går dypere inn i nettsidens bærekraft. Denne gir deg en detaljert rapport om forslag
-			til forbedringer for å gjøre nettsiden din mer miljøvennlig. </p>
-			
+		</section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> Ecograder - En helhetlig bærekraftsanalyse av nettsiden din</h2>
+			<p>
+				Ecograder er et verktøy som går dypere inn i nettsidens bærekraft. Denne gir deg en detaljert rapport om forslag
+				til forbedringer for å gjøre nettsiden din mer miljøvennlig.
+			</p>	
             <div class="card">
                 <h3>Den vurderer blant annet: </h3>
                 <ul>
@@ -115,13 +106,16 @@
                     <li>Besøk: <a href="https://www.ecograder.com/" target="_blank">Ecograder</a></li>
                 </ul>
             </div>
-		<br>
-		
-		<h2> TinyPNG - Optimaliser bilder for lavere karbonavtrykk</h2>
-		<p> TinyPNG hjelper deg med å komprimere bilder uten å miste kvalitet. 
-			Store bildefiler bruker mer energi når de lastet inn på en nettside, 
-			og ved å redusere filstørrelsen kan du spare båndbredde og gjøre nettsiden raskere.</p>
-			
+		</section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> TinyPNG - Optimaliser bilder for lavere karbonavtrykk</h2>
+			<p>
+				TinyPNG hjelper deg med å komprimere bilder uten å miste kvalitet. 
+				Store bildefiler bruker mer energi når de lastet inn på en nettside, 
+				og ved å redusere filstørrelsen kan du spare båndbredde og gjøre nettsiden raskere.
+			</p>
             <div class="card">
                 <h3>Hvordan kan TinyPNG hjelpe deg? </h3>
                 <ul>
@@ -133,16 +127,16 @@
                     <li>Besøk: <a href="https://www.tinypng.com/" target="_blank">TinyPNG</a></li>
                 </ul>
             </div>
-            <br>
-				
-		<h2> Green Web Foundation - Sjekk om nettsiden din bruker grønn hosting.</h2>
-		<p> The Green Web Foundation lar deg sjekke om en nettside hostes på en server som bruker
-			fornybar energi. Servere står for en stor del av karbonutslippene fra internett, 
-			så ved å bruke en grønn host kan du gjøre en stor forskjell.</p>
-			
-		
-        
-        
+		</section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> Green Web Foundation - Sjekk om nettsiden din bruker grønn hosting.</h2>
+			<p>
+				The Green Web Foundation lar deg sjekke om en nettside hostes på en server som bruker
+				fornybar energi. Servere står for en stor del av karbonutslippene fra internett, 
+				så ved å bruke en grønn host kan du gjøre en stor forskjell.
+			</p>
             <div class="card">
                 <h3>Green Web Foundation kan bidra med:</h3>
                 <ul>
@@ -154,18 +148,20 @@
                     <li>Besøk: <a href="https://wwww.thegreenwebfoundation.org/" target="_blank">The Green Web Foundation</a></li>
                 </ul>
             </div>
-        
-        
- 
-			<br>
-	
- <h2> Ved å ta i bruk disse verktøyene kan du gjøre en forskjell for både brukerne dine og miljøet.
-La oss kode grønnere!</h2> 
-</div>
-<footer>
-    <p>&copy; 2025 Grønn Koding. Alle rettigheter reservert.</p><a href="kontakt.html">Kontakt oss</a>
-</footer>
-   
- 
+        </section>
+	</div>
+    <div class="content">
+		<section>
+			<h2> Ved å ta i bruk disse verktøyene kan du gjøre en forskjell for både brukerne dine og miljøet. La oss kode grønnere!</h2> 
+		</section>
+	</div>
+<div id="footer"></div>
+<script>
+	fetch('footer.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('footer').innerHTML = data;
+	});
+</script>
 </body>
 </html>
