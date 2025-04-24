@@ -4,45 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grønn Koding</title>
-    <link rel="stylesheet" href="https://grønnkode.no/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-<style>
-
-
-
-</style>
-
 <body>
-
-<header>
-    <img src="logo.png" alt="Logo">
-    <div>
-        <h1>Grønn Koding</h1>
-        <p>Hvordan utvikling kan være både effektivt og bærekraftig</p>
-    </div>
-</header>
-
-<nav>
-    <a href="index.html">Hjem</a>
-    <a href="om.html">Om</a>
-    <a href="toolkit.html">Verktøykasse</a>
-	<a href="eksempler.html">Kode-eksempler</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
-
+<div id="navbar"></div>
+<script>
+	fetch('header.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('navbar').innerHTML = data;
+	});
+</script>
 <div class="content">
-    <section>
+	<section>
         <h2>Om grønn koding</h2>
         <p>
-            
-            <img src="cpugronn.jpg" style="float: left; margin-right: 10px; width: 500px;" class="fancy-img"> Grønn koding blir omtalt som bærekraftig programvare. Dette innebærer å skrive, 
-            men også implementere programvare på en slik måte som er med på å minske energiforbruket, 
-            samt ressursforbruket. <br> <br> 
-            
-            
-            IT-bransjen har et stort potensial til å bidra til å redusere miljøpåvirkningen og fremme bærekraftig utvikling med grønn programering.<br><br><br>
-            Utviklere kan skape løsninger som er funksjonelle, miljøvennlig og bærekraftig, om vi holder fokus på energieffektivitet, ressursoptimalisering, samt grønne praksiser.
-            Målet med grønn koding er å bli mer bærekraftig, og redusere karbonavtrykket fra teknologi.<br> <br> <br>
+            <img src="cpugronn.webp" style="" class="rounded-image">
+			Grønn koding, ofte omtalt som bærekraftig programvare, handler om å skrive og implementere programvare 
+			på en måte som reduserer energiforbruk og ressursbruk. 
+			<br>
+			<br>
+			<br>
+			IT-bransjen har et betydelig potensial til å bidra til å redusere miljøpåvirkningen 
+			og fremme bærekraftig utvikling gjennom grønn programmering. 
+			<br>
+			<br>
+			<br>
+			Ved å fokusere på energieffektivitet, ressursoptimalisering og grønne praksiser, kan utviklere skape 
+			løsninger som er både funksjonelle, miljøvennlige og bærekraftige. Målet med grønn koding er å oppnå 
+			større bærekraft og redusere teknologiens karbonavtrykk.
             <div class="card">
                 <h3>Bruk kun JavaScript der det er nødvendig</h3>
                 <ul>
@@ -88,9 +78,14 @@
    
 </div>
 
-<footer>
-    <p>&copy; 2025 Grønn Koding. Alle rettigheter reservert.</p>
-</footer>
+<div id="footer"></div>
+<script>
+	fetch('footer.html')
+	.then(response => response.text())
+	.then(data => {
+		document.getElementById('footer').innerHTML = data;
+	});
+</script>
 
 </body>
 </html>
