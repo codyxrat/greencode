@@ -113,7 +113,8 @@ canvas {
     border-radius: 100px;
     margin-right: 20px;
 	float: left; 
-	width: 420px;
+	width: 45%;
+	height: auto;
 }
 
 /* Kort med informasjon */
