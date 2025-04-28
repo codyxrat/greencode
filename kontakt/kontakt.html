@@ -15,7 +15,7 @@
 	padding: 1px;
 	margin-top: 35px;
 	background-color: rgba(255, 255, 255, 0.9);
-	border-radius: 8px;
+	border-radius: 5px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     justify-content: center; /* Horisontal sentrering */
     align-items: center; /* Vertikal sentrering */
@@ -67,11 +67,17 @@
     <a href="kontakt.html">Kontakt</a>
 </nav>
 
-<div class = "contentM">
-	<section>
-
-		 <div class = "kontakt" >
+<div class = "content">
+	
+	<div class = "kontakt" >
     <h3>Kontakt informasjon</h3>
+	<div class ="card">
+	<h2> Kort om oss</h2>
+	<p> Vi er en studentgruppe som deltar i PRO1000-kurset våren 2025. </p>
+	<p>Vår oppgave er å utvikle en nettside med fokus på grønn koding. Som en del av vår IT-utdanning, jobber vi med å skape en brukervennlig og moderne nettside. </p>
+	<p> Prosjektet gir oss verdifull praktisk erfaring innen webutvikling, samarbeid og utvikling av effektive digitale løsninger.</p>
+	</div>
+	
     <h3>Vis det noen som mangler eller trenger hjelp</h3>
     <p>Tlf: +47 00000000</p>
     <p>Epost: Kontakt@grønnkode.no</p>
@@ -79,29 +85,30 @@
 	
   </div>
 
-	<div class="card">
-        <section>
-	<h2>Kontaktskjema</h2>
-		<form action="https://formspree.io/f/your-form-id" method="POST">
-    <label for="navn">Navn:</label>
-    <input type="text" id="navn" name="navn" required><br><br>
+<div class ="card">
+<section>
+    <h2>Kontaktskjema</h2>
+    
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" required><br><br>
 
-    <label for="email">E-postadresse:</label>
-    <input type="email" id="email" name="email" required><br><br>
+        <label for="email">E-postadresse:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <label for="emne">Emne:</label>
-    <input type="text" id="emne" name="emne"><br><br>
+        <label for="emne">Emne:</label>
+        <input type="text" id="emne" name="emne"><br><br>
 
-    <label for="melding">Melding:</label>
-    <textarea id="melding" name="melding" rows="5" required></textarea><br><br>
+        <label for="melding">Melding:</label>
+        <textarea id="melding" name="melding" rows="5" required></textarea><br><br>
 
-    <button type="submit">Send</button>
-</form>
-
-	</section>
+        <button type="submit">Send</button>
+    </form>
+</section>
+	</div>
 </div>
 
-	</section>
+	
 	</div>
 
 <footer>
