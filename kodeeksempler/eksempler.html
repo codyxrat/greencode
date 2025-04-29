@@ -30,65 +30,6 @@
 	});
 </script>
 <div class="content">
-  <h2>Grønn koding vs. Ikke-grønn koding</h2>
-  <canvas id="comparisonChart" width="700" height="300"></canvas>
-  <script>
-      const ctx = document.getElementById('comparisonChart').getContext('2d');
-      const comparisonChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-              labels: ['CPU-bruk', 'Minneforbruk', 'Lastetid', 'Strømforbruk', 'Unødvendige funksjonskall'],
-              datasets: [
-                  {
-                      label: 'Grønn koding',
-                      data: [2, 2, 1, 2, 1],
-                      backgroundColor: 'rgba(34, 139, 34, 0.7)',
-                      borderColor: 'rgba(34, 139, 34, 1)',
-                      borderWidth: 1
-                  },
-                  {
-                      label: 'Ikke-grønn koding',
-                      data: [8, 9, 7, 8, 9],
-                      backgroundColor: 'rgba(220, 53, 69, 0.7)',
-                      borderColor: 'rgba(220, 53, 69, 1)',
-                      borderWidth: 1
-                  }
-              ]
-          },
-          options: {
-              responsive: true,
-              scales: {
-                  y: {
-                      beginAtZero: true,
-                      title: {
-                          display: true,
-                          text: 'Nivå (1 = lavt / 10 = høyt)'
-                      }
-                  }
-              }
-          }
-      }); 
-  </script>
-
-	<h2>Beskrivelse til grafen</h2> 
-	<p>
-		Grafen viser en fiktiv forskjell mellom grønn koding og vanlig koding, 
-		da vi per nå ikke har tilgang til gode rapporter over hvor store forbedringene er.
-	</p>
-    <p>
-		Grønn koding handler om å skrive kode som bruker mindre energi og jobber mer effektivt.
-		Dette kan for eksempel være å laste inn bilder kun når de vises på skjermen (lazy loading),
-		eller å huske tidligere beregninger slik at datamaskinen ikke må gjøre det samme flere ganger (caching). 
-		Slike teknikker er beskrevet i Python Docs og MDN Web Docs.
-	</p>
-	<p>
-		Når vi skriver grønn kode, får vi raskere nettsider, mindre belastning på servere, og mindre strømforbruk.
-		Det betyr ikke bare en bedre opplevelse for brukerne, men også at vi sparer miljøet.
-	</p>
-	<p>
-		Ifølge Norges forskningsråd kan små endringer i måten vi bruker energi på ha stor betydning for å redusere klimagassutslipp.
-		Det samme gjelder for koden vi skriver — effektiv kode er bra for både teknologien og planeten.</p>
-	</p>
 <h2>Python-eksempler</h2>
 <div class="card">
   <h3>Nybegynner: Listeforståelse</h3>
@@ -199,15 +140,11 @@ String result = builder.toString();</code></pre>
 
 <h2>Kilder</h2>
 <ul>
-  <li><a href="https://docs.python.org/3/howto/functional.html#generators" target="_blank">Python Docs – Generatorer</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN Web Docs – Array-metoder</a></li>
-  <li><a href="https://www.forskningsradet.no/siteassets/publikasjoner/2022/energieffektivisering-og-reduksjon-av-klimagasser.pdf" target="_blank">Norges forskningsråd – Energieffektivisering og reduksjon av klimagasser (2022)</a></li>
-  <li>Python-eksempler: <a href="https://docs.python.org/">Python Docs</a></li>
+ <li>Python-eksempler: <a href="https://docs.python.org/">Python Docs</a></li>
   <li>JavaScript-eksempler: <a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
   <li>Java-eksempler: <a href="https://docs.oracle.com/">Oracle Java Documentation</a></li>
   <li>C#-eksempler: <a href="https://learn.microsoft.com/">Microsoft Learn</a></li>
 </ul>
-
 </div>
 
 <div id="footer"></div>
